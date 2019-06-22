@@ -12,7 +12,7 @@ user_colorschemes = {'ashen', 'coda', 'codepaper', 'colorzone',
                      'cyberpunk', 'django', 'doriath', 'jellybeans', 'znake'}
 
 colors_path = Path(Path.cwd(), 'colors')
-all_colorschemes = {pyfile.stem for pyfile in colors_path.iterdir()}
+all_colorschemes = {vimfile.stem for vimfile in colors_path.iterdir()}
 shit_colorschemes = all_colorschemes - user_colorschemes
 
 def del_colorschemes(path_to: Path, data_set: set) -> None:
